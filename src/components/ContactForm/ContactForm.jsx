@@ -22,7 +22,7 @@ export function ContactForm() {
       contact => contact.name.toLowerCase() === name.value.toLowerCase()
     )
       ? alert(`${name.value} is already in contacts`)
-      : dispatch(addContact({ name: name.value, phone: number.value }));
+      : dispatch(addContact({ name: name.value, number: number.value }));
 
     form.reset();
   };
