@@ -6,8 +6,8 @@ import { useEffect } from 'react';
 import { Wrapper, Title } from './App.styled';
 import { Message } from 'components/Message/Message';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts } from 'redux/contactsOperations';
-import { selectIsLoading } from 'redux/selectors';
+import { fetchContacts } from 'redux/contacts/contactsOperations';
+import { selectIsLoading } from 'redux/contacts/contactSelectors';
 
 export function App() {
   const dispatch = useDispatch();
