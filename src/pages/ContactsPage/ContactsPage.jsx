@@ -7,17 +7,14 @@ import { fetchContacts } from 'redux/contacts/contactsOperations';
 import { selectIsLoading } from 'redux/contacts/contactSelectors';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { selectIsLoggedIn } from 'redux/auth/selectors';
 
 const ContactsPage = () => {
   const isLoading = useSelector(selectIsLoading);
-  const isLogedIn = useSelector[selectIsLoggedIn];
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (!isLogedIn) return;
-    dispatch(fetchContacts);
-  }, [dispatch, isLogedIn]);
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
   return (
     <Wrapper>

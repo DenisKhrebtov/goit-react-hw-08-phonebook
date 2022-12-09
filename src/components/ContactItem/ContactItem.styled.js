@@ -14,7 +14,20 @@ export const ContactNumber = styled.span`
 
 export const DeleteButton = styled.button`
   border-radius: 15px;
-  /* width: 100px; */
+
+  height: 30px;
+  color: red;
+  margin-left: 10px;
+  :hover,
+  :focus {
+    background-color: red;
+    color: white;
+    transform: scale(1.1);
+  }
+`;
+
+export const EditButton = styled.button`
+  border-radius: 15px;
   height: 30px;
   color: red;
   margin-left: 10px;
